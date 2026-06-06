@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SenaniTech Light Theme Design System */
+
+@layer base {
+  :root {
+    /* Backgrounds */
+    --background: 0 0% 100%; /* #ffffff */
+    --section-background: 0 0% 98%; /* #f9fafb */
+
+    /* Text */
+    --foreground: 0 0% 0%; /* #000000 */
+    --muted-foreground: 0 0% 33%; /* #555555 */
+
+    /* Primary */
+    --primary: 157 100% 43%; /* #00db87 */
+    --primary-foreground: 0 0% 100%; /* white */
+    --primary-hover: 156 100% 36%; /* #00b86f */
+
+    /* Accent & muted helpers */
+    --accent: 157 90% 35%;
+    --highlight: 157 100% 43%; /* #00db87 - same vibrant green as primary */
+    --highlight-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 60%;
+
+    /* Borders & inputs */
+    --border: 0 0% 90%; /* #e5e5e5 */
+    --input: 0 0% 100%;
+
+    /* Cards / surfaces */
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 0 0% 0%;
+
+    --radius: 0.75rem;
+    --shadow-card: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  /* Ensure light mode is default */
+  .dark {
+    /* keep same values so components remain consistent if .dark is present */
+    --background: 0 0% 100%;
+    --section-background: 0 0% 98%;
+    --foreground: 0 0% 0%;
+    --muted-foreground: 0 0% 33%;
+    --primary: 157 100% 43%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 156 100% 36%;
+    --highlight: 157 100% 43%;
+    --highlight-foreground: 0 0% 0%;
+    --border: 0 0% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    color: hsl(var(--foreground));
+  }
+
+  a {
+    color: hsl(var(--primary));
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: hsl(var(--primary-hover));
+  }
+}
+
+@layer components {
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+  }
+
+  .gradient-text-bright {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary-hover)), hsl(var(--accent)));
+  }
+
+  /* Glow Effects (subtle, not blur) */
+  .glow-sm {
+    box-shadow: 0 6px 18px -8px rgba(0,219,135,0.25);
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-medium text-white shadow-sm;
+    background-color: hsl(var(--primary));
+    border: 1px solid transparent;
+    transition: background-color 150ms ease, transform 120ms ease;
+  }
+
+  .btn-primary:hover {
+    background-color: hsl(var(--primary-hover));
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-medium bg-white;
+    color: hsl(var(--primary));
+    border: 1px solid hsl(var(--primary));
+    background-color: hsl(var(--card));
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-3 py-1 rounded text-sm;
+    color: hsl(var(--muted-foreground));
+    background: transparent;
+  }
+
+  /* Cards */
+  .card {
+    @apply p-4 rounded-xl;
+    background: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    box-shadow: var(--shadow-card);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Inputs / Forms */
+  .form-input,
+  input[type="text"],
+  input[type="email"],
+  input[type="search"],
+  textarea,
+  select {
+    @apply block w-full px-3 py-2 rounded-md bg-white text-foreground;
+    border: 1px solid hsl(var(--border));
+    transition: box-shadow 150ms ease, border-color 150ms ease;
+  }
+
+  .form-input:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 0 4px rgba(0,219,135,0.08);
+  }
+
+  label {
+    @apply text-sm font-medium text-foreground;
+  }
+
+  /* Navbar */
+  .site-nav {
+    @apply w-full flex items-center gap-4 px-4 py-3;
+    background: hsl(var(--card));
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .nav-link {
+    @apply text-sm text-foreground px-2 py-1 rounded-md;
+  }
+
+  .nav-link:hover {
+    color: hsl(var(--primary-hover));
+  }
+
+  .nav-link.active {
+    color: hsl(var(--primary));
+    font-weight: 600;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    @apply bg-card border border-border p-4 rounded-lg;
+    background: hsl(var(--card));
+    border-color: hsl(var(--border));
+  }
+
+  /* Tables */
+  .table {
+    @apply w-full text-sm border-collapse;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .table th {
+    @apply text-left px-4 py-3 bg-[hsl(var(--section-background))] text-foreground font-medium;
+  }
+
+  .table td {
+    @apply px-4 py-3 border-t border-border/60 text-foreground;
+    border-top: 1px solid hsl(var(--border));
+  }
+
+  /* Modal / Sheet */
+  .modal {
+    @apply bg-white rounded-xl p-6;
+    box-shadow: var(--shadow-card);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Footer */
+  .site-footer {
+    @apply w-full px-6 py-8;
+    background: hsl(var(--section-background));
+    color: hsl(var(--muted-foreground));
+    border-top: 1px solid hsl(var(--border));
+  }
+
+  /* Utility: subtle divider */
+  .divider {
+    height: 1px;
+    background: hsl(var(--border));
+    width: 100%;
+  }
+}
+
+@layer utilities {
+  /* small helper to ensure consistent borders use theme var */
+  .border-default {
+    border-color: hsl(var(--border));
+  }
+
+  /* subtle shadow utility */
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+}
