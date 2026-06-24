@@ -16,7 +16,7 @@ import {
   ChevronRight
 } from "lucide-react";
 
-import boschLogo from "@/assets/trusted-by/bosch.webp";
+import boschLogo from "@/assets/trusted-by/bosch.png";
 import bynetLogo from "@/assets/trusted-by/bynet.png";
 import globalchipLogo from "@/assets/trusted-by/globalchipindustrial.png";
 import healthcubeLogo from "@/assets/trusted-by/healthcube.png";

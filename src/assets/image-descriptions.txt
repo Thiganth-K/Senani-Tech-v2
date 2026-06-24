@@ -1,0 +1,517 @@
+SENANITECH — IMAGE DESCRIPTIONS (48 images, logos excluded)
+Descriptions sourced from section content in TSX files.
+================================================================================
+
+--------------------------------------------------------------------------------
+SERVICE SECTION (Home — ServicesSection.tsx)
+Card hero images — wide landscape (~16:9), displayed at h-52 in service cards.
+Style: clean isometric 3D illustration, white/light gray base, vibrant SenaniTech green
+(#00DB87) accents, subtle circuit trace lines, modern tech aesthetic, no text in image.
+Parent section: "What We Do — Engineering Excellence, Delivered"
+Parent intro: Three pillars of expertise working together to accelerate your product
+development and reduce time to market.
+--------------------------------------------------------------------------------
+
+1. ServiceSection/ServiceSection_Semiconductor.png
+   Section: What We Do — Semiconductor Services (Home card + /semiconductor-services)
+   Title: Semiconductor Services
+
+   Card Description (ServicesSection.tsx):
+   Comprehensive ATE services including probe cards, final test boards, and signal
+   integrity solutions for leading semiconductor platforms.
+
+   Key Features (card bullets):
+   - Universal Probe Cards
+   - Handler Interface Boards
+   - Signal Integrity Analysis
+
+   Extended Context (SemiconductorServices.tsx — page hero):
+   Utilizing our semiconductor services enables our customers to tap into specialized
+   expertise, cutting-edge manufacturing capabilities, and comprehensive support —
+   accelerating product development and bringing innovative solutions to market.
+
+   Service Verticals Covered:
+   - ATE Services: top-tier ATE board design and manufacturing for rigorous semiconductor
+     testing; accurate DUT performance and functionality measurement
+   - Final Test Boards: customized IC testing interfacing for Teradyne, Advantest, Nextest,
+     Chroma, NI and other major ATE platforms
+   - Probe Cards: wafer-level testing with blind vias for 20GHz, impedance optimization,
+     hybrid PCB stack-up (Megtron7, Rogers 4350B), up to 82 layers / 520mm diameter
+   - Reliability & Burn-in: HTOL, HAST/THB, HBM/LU boards, program cards, adapter boards
+   - IC Characterization Boards: performance assessment, parameter measurement, calibration,
+     validation through HW design, SI/PI simulations, PCB layout, PCBA
+   - Reference Design & Development: tailored IC reference kits for faster time-to-market
+   - Turnkey Build & Kit Development: NPI and proto builds — PCB assembly, inventory,
+     kitting, shipment, kit documentation
+
+   Image Generation Prompt:
+   Isometric 3D illustration for semiconductor testing and ATE services. A precision
+   robotic probe arm with fine needle tip interacting with a glowing green microchip on
+   a gray circuit board. Adjacent server/storage rack units with small indicator lights.
+   Thin gray circuit traces extending across a clean white background. Emphasize chip
+   testing, probe cards, final test boards, and signal integrity — manufacturing and
+   validation environment, not consumer electronics. Green accent glow on the central
+   chip. Professional, minimal, high-tech corporate style. Wide landscape composition
+   suitable for a website card header. No text, no logos.
+
+2. ServiceSection/ServiceSection_Technology.png
+   Section: What We Do — Technology Services (Home card + /technology-services)
+   Title: Technology Services
+
+   Card Description (ServicesSection.tsx):
+   SenaniTech's technology services provide tightly integrated prototyping validation
+   through a comprehensive one-stop solution for engineering and manufacturing
+   requirements.
+
+   Key Features (card bullets):
+   - Prototyping Validation
+   - Integrated Engineering
+   - One-Stop Manufacturing
+
+   Extended Context (TechnologyServices.tsx — page hero):
+   SenaniTech's technology services are tightly integrated with its prototyping validation
+   services. Through its integrated environment, SenaniTech's customers will be able to
+   realize a one-stop solution for their engineering & manufacturing requirements.
+
+   Service Categories Covered:
+   - Simulation Services: signal integrity (impedance optimization, TDR correlation, DDR
+     co-design Die/Package/Board) and power integrity (IR drop, decoupling, target
+     impedance, transient noise)
+   - Substrate Design: MLO/MLC design, SI/PI analysis, package-PCB fan-out, ball map
+     analysis, high-density BGA pitch, IR drop standards
+   - Embedded Software Development: BSP, middleware, drivers, board bring-up, application
+     and UI development, hardware-software integration
+   - Manufacturing Services: NPI/prototype build (concept to design, turnkey assembly,
+     functional test) and production build (planning, procurement, PCBA, QC, logistics)
+
+   Image Generation Prompt:
+   Isometric 3D illustration for integrated technology and engineering services. Central
+   glowing green microchip on a dark gray socket; gray circuit paths branch outward to
+   peripheral tech components — camera module, small robotic arm, rectangular sensor or
+   compute module. Represents prototyping validation, integrated engineering, and one-stop
+   manufacturing as a connected system. Clean white background, subtle circuit lines,
+   vibrant green (#00DB87) highlights on the central processor. Modern minimal isometric
+   style matching semiconductor sibling card. Wide landscape for website card header.
+   No text, no logos.
+
+3. ServiceSection/ServiceSection_System.png
+   Section: What We Do — System Solutions (Home card + /system-solutions)
+   Title: System Solutions
+
+   Card Description (ServicesSection.tsx):
+   Comprehensive product lifecycle coverage through close client collaboration, merging
+   cutting-edge technology, engineering excellence, and domain expertise to deliver
+   transformative products.
+
+   Key Features (card bullets):
+   - Full Lifecycle Coverage
+   - Engineering Excellence
+   - Domain Expertise
+
+   Extended Context (SystemsSolutions.tsx — page hero):
+   SenaniTech works hand in hand with its clients to offer extensive coverage throughout
+   the entire product development lifecycle. By blending advanced technology, engineering
+   expertise, structured process, and deep domain knowledge, SenaniTech is dedicated to
+   delivering innovative and game-changing products.
+
+   Extended Context (SystemsSolutions.tsx — product development overview):
+   SenaniTech, in conjunction with its clients, covers the entire product development
+   lifecycle. Senanitech combines state-of-the-art technology with engineering expertise,
+   structured processes, and deep domain experience to deliver innovative products. Our
+   integrated approach keeps critical disciplines in full communication, minimizing cost
+   and valuable time while moving through the product lifecycle.
+
+   Development Stages Covered:
+   - Hardware Design: architecture, schematic, layout, DFM/DFA
+   - Simulations: stack-up, signal integrity, power integrity
+   - FPGA Design: microarchitecture, RTL, board validation
+   - Embedded Software: firmware, BSP, drivers, board bring-up
+   - Mechanical & Thermal: industrial design, structural analysis, thermal simulations, MTBF
+   - Product Bring up & Validation: functional bring-up, EDVT, MDVT, FCC, UL/TUV certification
+   - Production Build: NPI, ramp-up, test development, compliance, distribution
+
+   Image Generation Prompt:
+   Isometric 3D illustration for full system solutions and product lifecycle coverage.
+   Most complex of the three service cards: large glowing green microchip on a circuit
+   board at center, surrounded by a miniature tech ecosystem interconnected by gray
+   circuit lines — satellite dish and server racks (top left), cloud icons and data
+   silos (top right), laptop and robotic arm (bottom left), small car, monitor, and
+   industrial components (bottom right). Represents full lifecycle coverage, engineering
+   excellence, and domain expertise across industries. Holistic connected system on white
+   background, green accent glow, clean isometric corporate style. Wide landscape for
+   website card header. No text, no logos.
+
+--------------------------------------------------------------------------------
+INDUSTRY SECTION (Home — IndustriesSection.tsx)
+--------------------------------------------------------------------------------
+
+4. IndustrySection/SemiConductors.png
+   Industry: Semiconductor
+   Description: Chip testing & validation. From semiconductor giants to healthcare innovators, we partner with industry leaders to deliver cutting-edge solutions.
+
+5. IndustrySection/AIML.png
+   Industry: AI/ML
+   Description: Machine learning hardware. Powering innovation across industries with cutting-edge engineering solutions.
+
+6. IndustrySection/DataCenter.png
+   Industry: Data Center
+   Description: Server infrastructure. High-performance electronics engineering for modern data center environments.
+
+7. IndustrySection/Storage.png
+   Industry: Storage
+   Description: SSD & memory solutions. Advanced hardware design and validation for storage technologies.
+
+8. IndustrySection/Networking.png
+   Industry: Networking
+   Description: High-speed connectivity. Engineering expertise for networking and communications hardware.
+
+9. IndustrySection/Healthcare.png
+   Industry: Healthcare
+   Description: Medical devices. Precision electronics engineering for healthcare and medical device applications.
+
+10. IndustrySection/Automotive.png
+    Industry: Automotive
+    Description: Vehicle electronics. Robust engineering solutions for automotive electronic systems.
+
+11. IndustrySection/Consumer.png
+    Industry: Consumer
+    Description: Consumer electronics. Product development from concept to market for consumer devices.
+
+--------------------------------------------------------------------------------
+PRODUCT LIFECYCLE (Home — LifecycleSection.tsx)
+Phase icons — square format, displayed at 64×64px (w-16 h-16) in lifecycle cards.
+Style: compact isometric 3D icon, white/light gray surfaces, vibrant green (#00DB87)
+accents, minimal detail readable at small size, consistent icon family across all 6 phases.
+Parent section: "Our Process — Product Development Lifecycle"
+Parent intro: A proven methodology that takes your product from initial concept to
+market-ready solution. Six phases shown in a horizontal timeline with arrows between cards.
+--------------------------------------------------------------------------------
+
+12. lifecycle/Lifecycle_Concept.png
+    Phase: 1 — Concept
+    Section Label: Our Process / Product Development Lifecycle
+
+    Short Description (card):
+    Initial ideation and requirements analysis
+
+    Full Phase Content (LifecycleSection.tsx):
+    - Concept
+    - Concept Validation
+    - Product Specification Development
+    - System Architecture
+
+    What This Phase Represents:
+    The earliest stage of product development where ideas are formed, validated against
+    market and technical feasibility, translated into formal product specifications, and
+    structured into a system architecture blueprint. Foundation for all downstream
+    engineering work.
+
+    Image Generation Prompt:
+    Compact square isometric icon for "Concept" phase of product development lifecycle.
+    Stack of three translucent layered planes or blueprint sheets with small green nodes
+    or spheres on the top layer — representing layered system architecture, ideation, and
+    requirements structuring. Clean white and light gray surfaces, subtle green (#00DB87)
+    accent elements. Minimal isometric style matching a 6-icon family. Must read clearly
+    at 64×64 pixels. Simple background, no text, no logos. Suggests planning, architecture,
+    and early conceptual design — not physical manufacturing.
+
+13. lifecycle/Lifecycle_Design.png
+    Phase: 2 — Design
+    Section Label: Our Process / Product Development Lifecycle
+
+    Short Description (card):
+    Schematic, layout, and simulation
+
+    Full Phase Content (LifecycleSection.tsx):
+    - Hardware Design & Firmware Development
+    - HW High & Low Level Design
+    - Component Engineering
+    - Board Bring-Up
+
+    What This Phase Represents:
+    Engineering design phase covering electronic schematics, PCB layout, circuit and
+    firmware development, component selection and engineering, and initial board bring-up
+    activities. Transition from abstract architecture to concrete hardware and software
+    design artifacts.
+
+    Image Generation Prompt:
+    Compact square isometric icon for "Design" phase. Isometric printed circuit board (PCB)
+    with visible traces, a central processor/chip package, and small green electronic
+    components (resistors, capacitors, connectors) arranged on the board surface. White PCB
+    substrate, gray traces, green (#00DB87) accent on the central chip or key components.
+    Minimal isometric style, readable at 64×64px, consistent with other lifecycle icons.
+    Represents schematic design, layout, and electronic engineering. No text, no logos.
+
+14. lifecycle/Lifecycle_Prototype.png
+    Phase: 3 — Prototype
+    Section Label: Our Process / Product Development Lifecycle
+
+    Short Description (card):
+    Rapid prototyping and iteration
+
+    Full Phase Content (LifecycleSection.tsx):
+    - PCB Design
+    - PCB Layout Design
+    - Signal / Power / Thermal Integrity Analysis
+    - High-Speed Design (HDI and ATI Boards)
+
+    What This Phase Represents:
+    Rapid iteration and physical/digital prototyping — detailed PCB design and layout,
+    signal integrity, power integrity, and thermal analysis, and advanced high-speed PCB
+    techniques including HDI (High Density Interconnect) and ATI boards. Building and
+    refining working prototypes before validation.
+
+    Image Generation Prompt:
+    Compact square isometric icon for "Prototype" phase. White square base platform
+    supporting a glowing green (#00DB87) three-dimensional topographic or layered surface
+    — like a 3D terrain map or elevation model representing a physical prototype being
+    formed or iterated. Suggests rapid prototyping, 3D modeling, and iteration. Clean
+    isometric minimal style, white and gray base, green accent glow on the elevated surface.
+    Readable at 64×64px, consistent lifecycle icon family. No text, no logos.
+
+15. lifecycle/Lifecycle_Validation.png
+    Phase: 4 — Validation
+    Section Label: Our Process / Product Development Lifecycle
+
+    Short Description (card):
+    Testing and verification
+
+    Full Phase Content (LifecycleSection.tsx):
+    - Mechanical Design and Development
+    - Enclosure Design
+    - Mechanical / Industrial Design
+    - Enclosure Fabrication
+    - Mass Fabrication for SS, MS
+
+    What This Phase Represents:
+    Comprehensive testing and verification including mechanical engineering, enclosure
+    and industrial design, fabrication of enclosures, and mass fabrication for stainless
+    steel (SS) and mild steel (MS) components. Quality assurance before production scale-up.
+
+    Image Generation Prompt:
+    Compact square isometric icon for "Validation" phase. White rectangular device or
+    product enclosure with a floating green (#00DB87) checkmark badge above it, plus a gray
+    caliper or measurement tool beside the device — symbolizing testing, measurement, and
+    quality verification. Clean isometric minimal style, readable at 64×64px, consistent
+    with lifecycle icon set. Represents testing, verification, and mechanical validation.
+    No text, no logos.
+
+16. lifecycle/Lifecycle_Production.png
+    Phase: 5 — Production
+    Section Label: Our Process / Product Development Lifecycle
+
+    Short Description (card):
+    Manufacturing and quality control
+
+    Full Phase Content (LifecycleSection.tsx):
+    - Electronics and Manufacturing Service
+    - Printed Circuit Board Manufacturing
+    - Printed Circuit Board Assembly
+
+    What This Phase Represents:
+    Scale manufacturing phase — electronics manufacturing services (EMS), PCB fabrication,
+    and PCB assembly (PCBA). Moving from validated prototypes to repeatable production with
+    quality control processes.
+
+    Image Generation Prompt:
+    Compact square isometric icon for "Production" phase. Gray manufacturing head or
+    robotic pick-and-place arm positioned over a white conveyor strip or production line
+    with a circuit board or product moving along it. Suggests automated manufacturing,
+    PCB assembly, and quality-controlled production. White and gray industrial surfaces,
+    subtle green (#00DB87) accent on a component or indicator light. Minimal isometric
+    style, readable at 64×64px, consistent lifecycle family. No text, no logos.
+
+17. lifecycle/Lifecycle_Launch.png
+    Phase: 6 — Launch
+    Section Label: Our Process / Product Development Lifecycle
+
+    Short Description (card):
+    Market-ready deployment
+
+    Full Phase Content (LifecycleSection.tsx):
+    - Box Building / Regulatory Compliance
+    - Power ON Testing
+    - Box Building
+    - Cable Harness
+    - EMI/EMC Consulting
+
+    What This Phase Represents:
+    Final market deployment — box build assembly, regulatory compliance, power-on testing,
+    cable harness integration, and EMI/EMC consulting. Product is packaged, certified, and
+    ready for customer delivery and market launch.
+
+    Image Generation Prompt:
+    Compact square isometric icon for "Launch" phase. Finished white electronic product
+    or device module with a green (#00DB87) shield icon beside it — representing security,
+    regulatory compliance, and market-ready certification. Suggests finalized product
+    ready for deployment. Clean isometric minimal style, white product body, green shield
+    accent, readable at 64×64px, consistent with other lifecycle icons. No text, no logos.
+
+--------------------------------------------------------------------------------
+TRUSTED BY — CLIENT LOGOS (About.tsx)
+--------------------------------------------------------------------------------
+
+18. trusted-by/bosch.webp
+    Section: Trusted by Industry Leaders
+    Client: Bosch
+    Description: Industry leader partner. Our team brings together decades of experience from leading semiconductor and electronics companies worldwide, combining deep technical expertise with a customer-first approach.
+
+19. trusted-by/neurosteller.png
+    Section: Trusted by Industry Leaders
+    Client: Neurostellar
+    Description: Industry leader partner. Trusted by innovators in semiconductor and electronics engineering excellence.
+
+20. trusted-by/bynet.png
+    Section: Trusted by Industry Leaders
+    Client: BYNET
+    Description: Industry leader partner. Join our growing list of partners bringing products from mind to market.
+
+21. trusted-by/healthcube.png
+    Section: Trusted by Industry Leaders
+    Client: HealthCube
+    Description: Industry leader partner in healthcare and medical technology sectors.
+
+22. trusted-by/techventures.png
+    Section: Trusted by Industry Leaders
+    Client: TechVentures
+    Description: Industry leader partner supporting technology innovation and product development.
+
+23. trusted-by/globalchipindustrial.png
+    Section: Trusted by Industry Leaders
+    Client: GlobalChip
+    Description: Industry leader partner in semiconductor and industrial electronics.
+
+--------------------------------------------------------------------------------
+SEMICONDUCTOR SERVICES (SemiconductorServices.tsx)
+--------------------------------------------------------------------------------
+
+24. semiconductor_services/ate_services.png
+    Section: ATE Services
+    Description: Through SenaniTech's ATE board development solutions, semiconductor manufacturers gain access to expertise and resources essential for designing, developing, and manufacturing top-tier ATE boards. These boards adhere to the rigorous standards of semiconductor testing, ensuring high quality and reliability. SenaniTech specializes in ATE hardware, facilitating accurate testing and measurement of the Device under test's performance & functionality.
+    Key Capabilities: Universal probe cards, Device interface board, Handler interface boards, Load boards, Probe interface boards, Characterization boards
+
+25. semiconductor_services/final_board.png
+    Section: ATE Services — Final Test Board
+    Description: SenaniTech provides customized solutions designed to meet specific IC testing requirements, ensuring accurate and reliable interfacing between the device under test and automated test equipment.
+    Key Points: Experience in all major ATE platforms – Teradyne, Advantest, Nextest, Chroma, NI & other platforms; Simulation Correlation - TDR Measurement on board to verify back drill stub effect; Decoupling Scheme Recommendation to meet transient current requirement; Power Integrity – IR Drop Optimization, Site to Site correlation; Step Drilling for Test Pogo vias, via modelling for high frequency, optimized pogo footprint
+
+26. semiconductor_services/probe_cards.png
+    Section: ATE Services — Probe Cards
+    Description: SenaniTech offers advanced technology and design services to create precise and durable cards suitable for wafer-level testing, ensuring high-quality and efficient testing for semiconductor wafers before they are packaged.
+    Key Points: Blind Vias for 20GHz to eliminate stub effect; Impedance optimization for BGA Vias, BGA Breakout region, Differential Via Modelling, Die pad optimizations; Hybrid PCB Stack up with Low Dk Material for High-Speed layers Megtron7, Megtron6, Rogers 4003C, Rogers 4350B etc.; Max Layer Count – 82 Layers / PCB Size/Diameter – Up to 520 mm
+
+27. semiconductor_services/reliability_&_burn-in.png
+    Section: Reliability & Burn-in Engineering
+    Description: SenaniTech is a leading provider of specialized design and manufacturing services for a wide range of Reliability PCBs specifically tailored to meet the stringent requirements of semiconductor companies.
+    Key Capabilities: HTOL, HAST/THB, HBM/LU Boards, MCC – LC2, AEHR MAX 3, REL INC, Delta – V (PTC), Program Cards / Coupon Boards / Adapter Boards
+
+28. semiconductor_services/ic_characterization.png
+    Section: IC Characterization Board
+    Description: At SenaniTech, we recognize the pivotal role that characterization boards play throughout the device development, testing and validation phases. Our hardware development platform for characterization facilitates crucial evaluations, including performance assessment, vital parameter measurement, calibration and IC validation. Leveraging our expertise in hardware design, signal and power integrity simulations, intricate PCB layout and high-quality PCBA, we serve as the ideal design partner for achieving successful IC development.
+    Key Capabilities: Requirement Analysis, Hardware Design and Prototyping, Signal Integrity and Performance Optimization, Software Development and Integration, Testing and Validation, Documentation and Support
+
+29. semiconductor_services/reference_design.png
+    Section: Reference Design & Development
+    Description: SenaniTech provides tailored IC Reference Kit development services designed to meet specific requirements. Through our expertise in customized IC Reference Kit development, semiconductor developers can accelerate the design process, validate performance and guarantee the quality of their integrated circuits. This results in faster time-to-market and increased competitiveness within the industry.
+    Key Capabilities: Requirement Analysis, Hardware Design and Prototyping, Signal Integrity and Performance Optimization, Software Development and Integration, Testing and Validation, Documentation and Support
+
+30. semiconductor_services/turnkey_build.png
+    Section: Turnkey Build & Kit Development
+    Description: SenaniTech's PCB turnkey build services, inclusive of kit development, deliver seamless solutions from initial concept to final delivery. We employ state-of-the-art PCB fabrication, precise assembly techniques, efficient inventory management, meticulous kitting, comprehensive test coverage and timely shipment. This ensures optimal execution of New Product Introduction projects (NPI) and small volume proto builds.
+
+31. semiconductor_services/pcb.png
+    Section: Turnkey Build & Kit Development — PCB Assembly
+    Description: Precise fabrication and assembly of printed circuit boards according to specified requirements.
+
+32. semiconductor_services/inventory.png
+    Section: Turnkey Build & Kit Development — Inventory Management
+    Description: Efficient tracking and management of electronic components, guaranteeing their availability throughout production.
+
+33. semiconductor_services/kitting.png
+    Section: Turnkey Build & Kit Development — Kitting
+    Description: Methodical compilation of all essential components into organized kits, enhancing the efficiency of the assembly process.
+
+34. semiconductor_services/shipment.png
+    Section: Turnkey Build & Kit Development — Shipment
+    Description: Coordination of logistics to ensure timely delivery of kits to end-users or production facilities, optimizing project timelines.
+
+35. semiconductor_services/kit_documentation.png
+    Section: Turnkey Build & Kit Development — Kit Documentation
+    Description: Thorough documentation accompanying each kit, providing comprehensive guidance and reference for assembly and usage.
+
+--------------------------------------------------------------------------------
+TECHNOLOGY SERVICES (TechnologyServices.tsx)
+--------------------------------------------------------------------------------
+
+36. technology_services/signal_integrity_simulations.png
+    Section: Simulation Services — Signal Integrity Simulations
+    Description: Ensures accurate and noise-free high speed data transmission in PCBs for optimal electronic communication.
+    Key Points: Impedance Optimization to minimize Return Loss System Loss Estimation and analysis; Simulation Correlation TDR Measurement; Simulations to verify compliance of High Speed Interfaces; Pre and Post Layout DDR simulations Co Design-(Die/Package/Board)
+
+37. technology_services/power_integrity_simulations.png
+    Section: Simulation Services — Power Integrity Simulations
+    Description: Guarantees stable and efficient power distribution to all PCB components, enhancing overall system reliability.
+    Key Points: DC Analysis-IR Drop, Voltage and Current Distribution Analysis; Decoupling Scheme Optimization; Target Impedance Simulations for power planes across Die, Package and PCB; AC Analysis-Transient Noise analysis
+
+38. technology_services/sustrate_design.png
+    Section: Substrate Design
+    Description: At SenaniTech, we excel in advanced substrate and MLO/MLC design, ensuring optimal system performance through specialized SI/PI analysis, Package-PCB fan-out optimization, and strategic ball map analysis. Our designs are not only compact with high density but also refined for reduced BGA pitch and precise ball assignment, addressing high current needs while minimizing delay and crosstalk, all within stringent impedance and IR drop standards.
+    Key Capabilities: Interpret electrical characterization and requirement for power distribution networks; Delivered several Substrate / Package designs for different manufacturer specifications; Insertion and Return loss Optimization for High-Speed Signals; Integrated Power Distribution Network analysis
+
+39. technology_services/embedded_software-development.png
+    Section: Embedded Software Development
+    Description: Harnessing the synergy of low-level abstraction, real-time systems, and intricate hardware interplay, our embedded software development delves into the core fabric of technology, crafting optimized and scalable solutions that unlock the full potential of hardware-software integration.
+    Key Capabilities: Application Software and UI Development; Board Support Package (BSP) and Middleware Development; Driver Development and Porting; Board Bring-up and HW Diagnostics; Embedded Application
+
+40. technology_services/npi_build.png
+    Section: Manufacturing Services — NPI/Prototype Build
+    Description: At SenaniTech, we assist our clients in transforming their ideas into tangible products during this pivotal phase where concepts evolve into reality. Through our NPI (New Product Introduction) and prototyping services, we empower companies to expedite their time-to-market by reducing development cycles and promptly adapting to market dynamics.
+    Key Points: Concept to Design, Turnkey Assembly, Functional Test & Debug, Prototyping Iterations, Documentation and report
+
+41. technology_services/production_build.png
+    Section: Manufacturing Services — Production Build
+    Description: Our small and medium volume PCBA production services are tailored to meet the diverse needs of businesses, spanning from startups to well-established enterprises.
+    Key Points: Production Planning and Scheduling; Material Procurement & Inventory Management; PCB Assembly; Quality Control & Testing; Production Support & Troubleshooting; Continuous Improvement and Optimization; Logistics & Distribution
+
+--------------------------------------------------------------------------------
+SYSTEMS SOLUTIONS (SystemsSolutions.tsx)
+--------------------------------------------------------------------------------
+
+42. system-solns/comprehensive_capablities/hardware_designs.png
+    Section: Hardware Design
+    Description: Explore our core competencies in hardware design and discover how our integrated lifecycle approach ensures high-quality engineering deliverables.
+    Offerings: System Architecture & Component Selection, Technical Hardware Design Document, Schematic Engineering, Circuit Simulations, Layout Engineering, DFM/DFA Analysis
+
+43. system-solns/comprehensive_capablities/simulations.png
+    Section: Simulations
+    Description: Explore our core competencies in simulations and discover how our integrated lifecycle approach ensures high-quality engineering deliverables.
+    Offerings: Stack-up Engineering, Signal Integrity Analysis, Power Integrity Analysis
+
+44. system-solns/comprehensive_capablities/fpga_design.png
+    Section: FPGA Design
+    Description: Explore our core competencies in FPGA design and discover how our integrated lifecycle approach ensures high-quality engineering deliverables.
+    Offerings: Microarchitecture Development, FPGA RTL Design, Board Validation
+
+45. system-solns/comprehensive_capablities/embedded_software.png
+    Section: Embedded Software
+    Description: Explore our core competencies in embedded software and discover how our integrated lifecycle approach ensures high-quality engineering deliverables.
+    Offerings: Firmware and BSP Development, Application and UI Software Development, Device drivers and API Development, Board bringup and Hardware Validation
+
+46. system-solns/comprehensive_capablities/mechanical_and_thermal_capablity.png
+    Section: Mechanical & Thermal Capability
+    Description: Explore our core competencies in mechanical & thermal capability and discover how our integrated lifecycle approach ensures high-quality engineering deliverables.
+    Offerings: Industrial Design, Structural Analysis, Mechanical Design, Thermal Simulations, MTBF Analysis
+
+47. system-solns/comprehensive_capablities/product_bring_up_and_violation.png
+    Section: Product Bring up & Validation
+    Description: Explore our core competencies in product bring up & validation and discover how our integrated lifecycle approach ensures high-quality engineering deliverables.
+    Offerings: Hardware Functional Bring up, Electrical DVT (EDVT), Mechanical DVT (MDVT), Certification - FCC Class, Safety - UL and TUV
+
+48. system-solns/comprehensive_capablities/product_build.png
+    Section: Production Build
+    Description: Explore our core competencies in production build and discover how our integrated lifecycle approach ensures high-quality engineering deliverables.
+    Offerings: NPI/Prototype Build, Production Ramp up, Integration and Test Development, Certification and Compliance, Packaging and Inventory Management, Distribution and Support
+
+================================================================================
+END OF FILE — 48 images (logo_1.png and logo_2.png excluded)
+================================================================================
