@@ -1,14 +1,14 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-import semiconductorImg from "@/assets/IndustrySection/IndustrySection_Semiconductors.png";
-import aimlImg from "@/assets/IndustrySection/IndustrySection_AIML.png";
-import dataCenterImg from "@/assets/IndustrySection/IndustrySection_DataCenter.png";
-import storageImg from "@/assets/IndustrySection/IndustrySection_Storage.png";
-import networkingImg from "@/assets/IndustrySection/IndustrySection_Networking.png";
-import healthcareImg from "@/assets/IndustrySection/IndustrySection_Healthcare.png";
-import automotiveImg from "@/assets/IndustrySection/IndustrySection_Automotive.png";
-import consumerImg from "@/assets/IndustrySection/IndustrySection_Consumer.png";
+import semiconductorImg from "@/assets/IndustrySection/SemiConductors.png";
+import aimlImg from "@/assets/IndustrySection/AIML.png";
+import dataCenterImg from "@/assets/IndustrySection/DataCenter.png";
+import storageImg from "@/assets/IndustrySection/Storage.png";
+import networkingImg from "@/assets/IndustrySection/Networking.png";
+import healthcareImg from "@/assets/IndustrySection/Healthcare.png";
+import automotiveImg from "@/assets/IndustrySection/Automotive.png";
+import consumerImg from "@/assets/IndustrySection/Consumer.png";
 
 const industries = [
   { image: semiconductorImg, name: "Semiconductor", description: "Chip testing & validation" },
