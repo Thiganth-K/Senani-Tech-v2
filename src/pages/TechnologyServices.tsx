@@ -150,7 +150,7 @@ function SubServiceCard({ item, index, isGrid }: { item: AccordionItem; index: n
 
       <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start mt-auto">
         {item.image && (
-          <div className="w-48 h-48 mx-auto md:mx-0 md:w-32 md:h-32 lg:w-36 lg:h-36 flex items-center justify-center flex-shrink-0 relative">
+          <div className="order-1 w-48 h-48 mx-auto md:order-2 md:mx-0 md:ml-auto md:w-32 md:h-32 lg:w-36 lg:h-36 flex items-center justify-center flex-shrink-0 relative">
             <img
               src={item.image}
               alt={item.title}
@@ -160,7 +160,7 @@ function SubServiceCard({ item, index, isGrid }: { item: AccordionItem; index: n
         )}
         
         {item.points && item.points.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 flex-1 w-full">
+          <div className="order-2 md:order-1 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 flex-1 w-full">
             <ul className="space-y-4">
               {item.points.slice(0, 4).map((p, i) => (
                 <li key={i} className="flex items-start gap-3.5 text-sm text-muted-foreground group/item hover:text-foreground transition-colors duration-200">
