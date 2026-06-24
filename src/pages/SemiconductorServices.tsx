@@ -6,18 +6,18 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Cpu, ShieldCheck, Microscope, LayoutTemplate, PackageOpen } from "lucide-react";
 
-import ateImg from "@/assets/semiconductor_services/semiconductor_services_ate_services.png";
-import finalBoardImg from "@/assets/semiconductor_services/semiconductor_services_final_board.png";
-import probeCardsImg from "@/assets/semiconductor_services/semiconductor_services_probe_cards.png";
-import reliabilityImg from "@/assets/semiconductor_services/semiconductor_services_reliability_&_burn-in.png";
-import icCharImg from "@/assets/semiconductor_services/semiconductor_services_ic_characterization.png";
-import referenceImg from "@/assets/semiconductor_services/semiconductor_services_reference_design.png";
-import turnkeyImg from "@/assets/semiconductor_services/semiconductor_services_turnkey_build.png";
-import pcbImg from "@/assets/semiconductor_services/semiconductor_services_pcb.png";
-import inventoryImg from "@/assets/semiconductor_services/semiconductor_services_inventory.png";
-import kittingImg from "@/assets/semiconductor_services/semiconductor_services_kitting.png";
-import shipmentImg from "@/assets/semiconductor_services/semiconductor_services_shipment.png";
-import kitDocImg from "@/assets/semiconductor_services/semiconductor_services_kit_documentation.png";
+import ateImg from "@/assets/semiconductor_services/ate_services.png";
+import finalBoardImg from "@/assets/semiconductor_services/final_board.png";
+import probeCardsImg from "@/assets/semiconductor_services/probe_cards.png";
+import reliabilityImg from "@/assets/semiconductor_services/reliability_&_burn-in.png";
+import icCharImg from "@/assets/semiconductor_services/ic_characterization.png";
+import referenceImg from "@/assets/semiconductor_services/reference_design.png";
+import turnkeyImg from "@/assets/semiconductor_services/turnkey_build.png";
+import pcbImg from "@/assets/semiconductor_services/pcb.png";
+import inventoryImg from "@/assets/semiconductor_services/inventory.png";
+import kittingImg from "@/assets/semiconductor_services/kitting.png";
+import shipmentImg from "@/assets/semiconductor_services/shipment.png";
+import kitDocImg from "@/assets/semiconductor_services/kit_documentation.png";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -194,19 +194,19 @@ function SubServiceCard({ item, index }: { item: AccordionItem; index: number })
         {item.intro}
       </p>
 
-      {item.points && item.points.length > 0 ? (
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start mt-auto">
-          {item.image && (
-            <div className="order-1 w-48 h-48 mx-auto md:order-2 md:mx-0 md:ml-auto md:w-32 md:h-32 lg:w-36 lg:h-36 flex items-center justify-center flex-shrink-0 relative">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-110 relative z-10"
-              />
-            </div>
-          )}
-          
-          <div className="order-2 md:order-1 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 flex-1 w-full">
+      <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start mt-auto">
+        {item.image && (
+          <div className="w-48 h-48 mx-auto md:mx-0 md:w-32 md:h-32 lg:w-36 lg:h-36 flex items-center justify-center flex-shrink-0 relative">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-110 relative z-10"
+            />
+          </div>
+        )}
+        
+        {item.points && item.points.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 flex-1 w-full">
             <ul className="space-y-4">
               {item.points.slice(0, 4).map((p, i) => (
                 <li key={i} className="flex items-start gap-3.5 text-sm text-muted-foreground group/item hover:text-foreground transition-colors duration-200">
@@ -230,20 +230,8 @@ function SubServiceCard({ item, index }: { item: AccordionItem; index: number })
               </ul>
             )}
           </div>
-        </div>
-      ) : (
-        item.image && (
-          <div className="mt-auto pt-4 w-full flex justify-center">
-            <div className="w-40 h-40 flex items-center justify-center relative">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-110 relative z-10"
-              />
-            </div>
-          </div>
-        )
-      )}
+        )}
+      </div>
     </motion.div>
   );
 }
@@ -336,28 +324,11 @@ function ContentPanel({ section }: { section: Section }) {
           <h3 className="font-display font-semibold text-foreground text-xl md:text-2xl mb-4">
             {section.id === "turnkey" ? "Key Elements" : "Sub-Services"}
           </h3>
-          {section.accordions.length === 5 ? (
-            <div className="space-y-6">
-              {/* First 3 in a row */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {section.accordions.slice(0, 3).map((acc, i) => (
-                  <SubServiceCard key={acc.title} item={acc} index={i} />
-                ))}
-              </div>
-              {/* Next 2 in a row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {section.accordions.slice(3, 5).map((acc, i) => (
-                  <SubServiceCard key={acc.title} item={acc} index={i + 3} />
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 gap-6">
-              {section.accordions.map((acc, i) => (
-                <SubServiceCard key={acc.title} item={acc} index={i} />
-              ))}
-            </div>
-          )}
+          <div className="grid grid-cols-1 gap-6">
+            {section.accordions.map((acc, i) => (
+              <SubServiceCard key={acc.title} item={acc} index={i} />
+            ))}
+          </div>
         </motion.div>
       )}
 

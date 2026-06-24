@@ -3,12 +3,12 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-import conceptImg   from "@/assets/lifecycle/Lifecycle_Concept.png";
-import designImg    from "@/assets/lifecycle/Lifecycle_Design.png";
-import prototypeImg from "@/assets/lifecycle/Lifecycle_Prototype.png";
-import validationImg from "@/assets/lifecycle/Lifecycle_Validation.png";
-import productionImg from "@/assets/lifecycle/Lifecycle_Production.png";
-import launchImg    from "@/assets/lifecycle/Lifecycle_Launch.png";
+import conceptImg   from "@/assets/lifecycle/concept.png";
+import designImg    from "@/assets/lifecycle/design.png";
+import prototypeImg from "@/assets/lifecycle/prototype.png";
+import validationImg from "@/assets/lifecycle/validation.png";
+import productionImg from "@/assets/lifecycle/production.png";
+import launchImg    from "@/assets/lifecycle/launch.png";
 
 const phases = [
   {
@@ -158,11 +158,11 @@ export function LifecycleSection() {
                   >
                     <div className="p-6 flex flex-col flex-grow">
                       {/* Image */}
-                      <div className="w-24 h-24 mx-auto mb-4 overflow-hidden shrink-0">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden shrink-0">
                         <img
                           src={phase.image}
                           alt={phase.title}
-                          className="w-full h-full object-contain"
+                          className="w-full h-full object-cover"
                         />
                       </div>
 
