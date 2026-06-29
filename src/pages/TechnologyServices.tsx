@@ -133,6 +133,8 @@ const sections: Section[] = [
 // ─── Sub-Service Card ─────────────────────────────────────────────────────────
 
 function SubServiceCard({ item, index, isGrid }: { item: AccordionItem; index: number; isGrid?: boolean }) {
+  const hasPoints = item.points && item.points.length > 0;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -141,51 +143,75 @@ function SubServiceCard({ item, index, isGrid }: { item: AccordionItem; index: n
       transition={{ duration: 0.4, delay: index * 0.1 }}
       className="group bg-card border border-border/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 flex flex-col p-6 md:p-8 lg:p-10"
     >
-      <h4 className="text-xl md:text-2xl font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-        {item.title}
-      </h4>
-      <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
-        {item.intro}
-      </p>
-
-      <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start mt-auto">
-        {item.image && (
-          <div className="w-48 h-48 mx-auto md:mx-0 md:w-32 md:h-32 lg:w-36 lg:h-36 flex items-center justify-center flex-shrink-0 relative">
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-110 relative z-10"
-            />
+      {!hasPoints ? (
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center justify-between w-full mt-auto mb-auto">
+          <div className="flex-1 text-left">
+            <h4 className="text-xl md:text-2xl font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+              {item.title}
+            </h4>
+            <p className="text-muted-foreground leading-relaxed text-sm md:text-base mb-0">
+              {item.intro}
+            </p>
           </div>
-        )}
-        
-        {item.points && item.points.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 flex-1 w-full">
-            <ul className="space-y-4">
-              {item.points.slice(0, 4).map((p, i) => (
-                <li key={i} className="flex items-start gap-3.5 text-sm text-muted-foreground group/item hover:text-foreground transition-colors duration-200">
-                  <span className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover/item:bg-primary group-hover/item:text-primary-foreground transition-colors duration-300 shadow-sm">
-                    <Check size={14} strokeWidth={2.5} />
-                  </span>
-                  <span className="leading-relaxed pt-0.5">{p}</span>
-                </li>
-              ))}
-            </ul>
-            {item.points.length > 4 && (
-              <ul className="space-y-4">
-                {item.points.slice(4).map((p, i) => (
-                  <li key={i + 4} className="flex items-start gap-3.5 text-sm text-muted-foreground group/item hover:text-foreground transition-colors duration-200">
-                    <span className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover/item:bg-primary group-hover/item:text-primary-foreground transition-colors duration-300 shadow-sm">
-                      <Check size={14} strokeWidth={2.5} />
-                    </span>
-                    <span className="leading-relaxed pt-0.5">{p}</span>
-                  </li>
-                ))}
-              </ul>
+          {item.image && (
+            <div className="w-32 h-32 flex items-center justify-center flex-shrink-0 relative mx-auto md:mx-0">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-110 relative z-10"
+              />
+            </div>
+          )}
+        </div>
+      ) : (
+        <>
+          <h4 className="text-xl md:text-2xl font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+            {item.title}
+          </h4>
+          <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
+            {item.intro}
+          </p>
+
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start mt-auto">
+            {item.image && (
+              <div className="w-48 h-48 mx-auto md:mx-0 md:w-32 md:h-32 lg:w-36 lg:h-36 flex items-center justify-center flex-shrink-0 relative">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-110 relative z-10"
+                />
+              </div>
+            )}
+            
+            {item.points && item.points.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 flex-1 w-full">
+                <ul className="space-y-4">
+                  {item.points.slice(0, 3).map((p, i) => (
+                    <li key={i} className="flex items-start gap-3.5 text-sm text-muted-foreground group/item hover:text-foreground transition-colors duration-200">
+                      <span className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover/item:bg-primary group-hover/item:text-primary-foreground transition-colors duration-300 shadow-sm">
+                        <Check size={14} strokeWidth={2.5} />
+                      </span>
+                      <span className="leading-relaxed pt-0.5">{p}</span>
+                    </li>
+                  ))}
+                </ul>
+                {item.points.length > 3 && (
+                  <ul className="space-y-4">
+                    {item.points.slice(3).map((p, i) => (
+                      <li key={i + 3} className="flex items-start gap-3.5 text-sm text-muted-foreground group/item hover:text-foreground transition-colors duration-200">
+                        <span className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover/item:bg-primary group-hover/item:text-primary-foreground transition-colors duration-300 shadow-sm">
+                          <Check size={14} strokeWidth={2.5} />
+                        </span>
+                        <span className="leading-relaxed pt-0.5">{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             )}
           </div>
-        )}
-      </div>
+        </>
+      )}
     </motion.div>
   );
 }
@@ -212,14 +238,16 @@ function ContentPanel({ section }: { section: Section }) {
         transition={{ duration: 0.45 }}
         className="mb-8"
       >
-        <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-3">
-          Technology Services
-        </span>
-        <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 leading-tight">
-          {section.title}
-        </h2>
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-6 items-start">
           <div className="flex-1 space-y-4">
+            <div>
+              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-3">
+                Technology Services
+              </span>
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 leading-tight">
+                {section.title}
+              </h2>
+            </div>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
               {section.intro}
             </p>
@@ -230,7 +258,7 @@ function ContentPanel({ section }: { section: Section }) {
             )}
           </div>
           {section.image && (
-            <div className={`w-full max-w-[220px] flex-shrink-0 relative group mx-auto lg:mx-0 flex items-center justify-center ${section.id === 'embedded' ? 'lg:-mt-12' : ''}`}>
+            <div className="w-full max-w-[220px] flex-shrink-0 relative group mx-auto lg:mx-0 flex items-center justify-center lg:mt-8">
               <img 
                 src={section.image} 
                 alt={section.title} 
@@ -342,9 +370,11 @@ const TechnologyServices = () => {
                     Get a Quote <ArrowRight size={17} />
                   </Button>
                 </Link>
-                <Button variant="hero-outline" size="lg">
-                  Download Capabilities
-                </Button>
+                <a href="/SENANITECH_PPT.pptx" download="SenaniTech_Capabilities.pptx">
+                  <Button variant="hero-outline" size="lg">
+                    Download Capabilities
+                  </Button>
+                </a>
               </div>
             </motion.div>
           </div>
