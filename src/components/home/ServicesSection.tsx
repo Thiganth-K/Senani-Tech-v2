@@ -3,9 +3,9 @@ import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-import semiconductorImg from "@/assets/ServiceSection/ServiceSection_Semiconductor.png";
-import technologyImg from "@/assets/ServiceSection/ServiceSection_Technology.png";
-import systemImg from "@/assets/ServiceSection/ServiceSection_System.png";
+import semiconductorImg from "@/assets/ServiceSection/Semiconductor.jpg";
+import technologyImg from "@/assets/ServiceSection/Technology.jpg";
+import systemImg from "@/assets/ServiceSection/System.jpg";
 
 const services = [
   {

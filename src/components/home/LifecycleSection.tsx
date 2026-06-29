@@ -3,12 +3,12 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-import conceptImg   from "@/assets/lifecycle/Lifecycle_Concept.png";
-import designImg    from "@/assets/lifecycle/Lifecycle_Design.png";
-import prototypeImg from "@/assets/lifecycle/Lifecycle_Prototype.png";
-import validationImg from "@/assets/lifecycle/Lifecycle_Validation.png";
-import productionImg from "@/assets/lifecycle/Lifecycle_Production.png";
-import launchImg    from "@/assets/lifecycle/Lifecycle_Launch.png";
+import conceptImg   from "@/assets/lifecycle/concept.png";
+import designImg    from "@/assets/lifecycle/design.png";
+import prototypeImg from "@/assets/lifecycle/prototype.png";
+import validationImg from "@/assets/lifecycle/validation.png";
+import productionImg from "@/assets/lifecycle/production.png";
+import launchImg    from "@/assets/lifecycle/launch.png";
 
 const phases = [
   {

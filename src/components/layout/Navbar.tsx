@@ -7,6 +7,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { cn } from "@/lib/utils";
 import logoShort from "@/assets/logo_2.png";
 import logoLong from "@/assets/logo_1.png";
+import { PortfolioModal } from "@/components/portfolio/PortfolioModal";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -20,6 +21,7 @@ const navItems = [
     ],
   },
   { name: "About Us", path: "/about" },
+  { name: "Portfolio", path: "#portfolio" },
   { name: "Contact Us", path: "/contact" },
 ];
 
@@ -27,6 +29,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -91,6 +94,13 @@ export function Navbar() {
                         activeDropdown === item.name && "rotate-180"
                       )}
                     />
+                  </button>
+                ) : item.name === "Portfolio" ? (
+                  <button
+                    onClick={() => setIsPortfolioOpen(true)}
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-1 text-muted-foreground hover:text-foreground cursor-pointer"
+                  >
+                    {item.name}
                   </button>
                 ) : (
                   <Link
@@ -264,6 +274,16 @@ export function Navbar() {
                               )}
                             />
                           </button>
+                        ) : item.name === "Portfolio" ? (
+                          <button
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setIsPortfolioOpen(true);
+                            }}
+                            className="w-full text-left block px-3 py-3 rounded-lg text-lg font-medium transition-all text-muted-foreground hover:bg-muted hover:text-foreground cursor-pointer"
+                          >
+                            {item.name}
+                          </button>
                         ) : (
                           <Link
                             to={item.path}
@@ -314,6 +334,7 @@ export function Navbar() {
             )}
         </AnimatePresence>
       </div>
+      <PortfolioModal isOpen={isPortfolioOpen} onClose={() => setIsPortfolioOpen(false)} />
     </motion.header>
   );
 }
