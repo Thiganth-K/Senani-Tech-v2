@@ -7,7 +7,6 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { cn } from "@/lib/utils";
 import logoShort from "@/assets/logo_2.png";
 import logoLong from "@/assets/logo_1.png";
-import { PortfolioModal } from "@/components/portfolio/PortfolioModal";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -21,7 +20,7 @@ const navItems = [
     ],
   },
   { name: "About Us", path: "/about" },
-  { name: "Portfolio", path: "#portfolio" },
+  { name: "Portfolio", path: "/portfolio" },
   { name: "Contact Us", path: "/contact" },
 ];
 
@@ -29,7 +28,6 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -58,10 +56,10 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <nav className="relative flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="relative group inline-flex items-center gap-3">
-            <motion.div whileHover={{ scale: 1.02 }} className="flex items-center gap-3">
-              <img src={logoShort} alt="SenaniTech" className="w-14 h-14 object-contain" />
-              <img src={logoLong} alt="SenaniTech" className="h-16 md:h-24 w-auto max-w-[320px] object-contain" />
+          <Link to="/" className="relative group inline-flex items-center gap-0">
+            <motion.div whileHover={{ scale: 1.02 }} className="flex items-center gap-0">
+              <img src={logoShort} alt="SenaniTech" className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0" />
+              <img src={logoLong} alt="SenaniTech" className="h-20 md:h-28 w-auto max-w-[360px] object-contain -ml-2 sm:-ml-3 shrink-0" />
             </motion.div>
           </Link>
 
@@ -80,7 +78,7 @@ export function Navbar() {
                       setActiveDropdown(activeDropdown === item.name ? null : item.name)
                     }
                     className={cn(
-                      "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-1 cursor-pointer",
+                      "px-4 py-2.5 rounded-lg text-base sm:text-lg font-bold transition-all duration-200 flex items-center gap-1.5 cursor-pointer",
                       activeDropdown === item.name
                         ? "text-highlight"
                         : "text-muted-foreground hover:text-foreground"
@@ -88,25 +86,18 @@ export function Navbar() {
                   >
                     {item.name}
                     <ChevronDown
-                      size={14}
+                      size={18}
                       className={cn(
                         "transition-transform duration-200",
                         activeDropdown === item.name && "rotate-180"
                       )}
                     />
                   </button>
-                ) : item.name === "Portfolio" ? (
-                  <button
-                    onClick={() => setIsPortfolioOpen(true)}
-                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-1 text-muted-foreground hover:text-foreground cursor-pointer"
-                  >
-                    {item.name}
-                  </button>
                 ) : (
                   <Link
                     to={item.path}
                     className={cn(
-                      "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-1",
+                      "px-4 py-2.5 rounded-lg text-base sm:text-lg font-bold transition-all duration-200 flex items-center gap-1.5",
                       location.pathname === item.path
                         ? "text-highlight"
                         : "text-muted-foreground hover:text-foreground"
@@ -132,14 +123,14 @@ export function Navbar() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-64 card rounded-xl p-2 shadow-xl border border-default"
+                      className="absolute top-full left-0 mt-2 w-72 card rounded-xl p-2.5 shadow-xl border border-default"
                     >
                       {item.dropdown.map((subItem, index) => (
                         <Link
                           key={subItem.name}
                           to={subItem.path}
                           className={cn(
-                            "block px-4 py-3 rounded-lg text-sm transition-all duration-200",
+                            "block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200",
                             location.pathname === subItem.path
                               ? "bg-primary/20 text-highlight"
                               : "text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -213,10 +204,10 @@ export function Navbar() {
               >
                 <div className="max-w-md w-full mx-auto pt-6 pb-12 px-6">
                   <div className="flex items-center justify-between mb-6">
-                    <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-3">
-                      <div className="flex items-center gap-3">
-                        <img src={logoShort} alt="SenaniTech" className="w-12 h-12 object-contain" />
-                        <img src={logoLong} alt="SenaniTech" className="h-16 md:h-24 w-auto max-w-[320px] object-contain" />
+                    <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-0">
+                      <div className="flex items-center gap-0">
+                        <img src={logoShort} alt="SenaniTech" className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0" />
+                        <img src={logoLong} alt="SenaniTech" className="h-20 md:h-28 w-auto max-w-[360px] object-contain -ml-2 sm:-ml-3 shrink-0" />
                       </div>
                     </Link>
                     <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-md">
@@ -274,16 +265,6 @@ export function Navbar() {
                               )}
                             />
                           </button>
-                        ) : item.name === "Portfolio" ? (
-                          <button
-                            onClick={() => {
-                              setIsMobileMenuOpen(false);
-                              setIsPortfolioOpen(true);
-                            }}
-                            className="w-full text-left block px-3 py-3 rounded-lg text-lg font-medium transition-all text-muted-foreground hover:bg-muted hover:text-foreground cursor-pointer"
-                          >
-                            {item.name}
-                          </button>
                         ) : (
                           <Link
                             to={item.path}
@@ -334,7 +315,6 @@ export function Navbar() {
             )}
         </AnimatePresence>
       </div>
-      <PortfolioModal isOpen={isPortfolioOpen} onClose={() => setIsPortfolioOpen(false)} />
     </motion.header>
   );
 }

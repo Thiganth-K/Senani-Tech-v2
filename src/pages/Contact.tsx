@@ -224,6 +224,9 @@ const Contact = () => {
                       </div>
                       <div>
                         <div className="font-medium">Registered Address</div>
+                        <div className="text-sm text-muted-foreground mt-1">
+                          SENANITECH
+                        </div>
                         <div className="text-xs text-muted-foreground mt-2">
                           212-6(3), Thirumalai Nagar, Narasothipatty,<br />
                           Alagapuram, Salem,<br />
