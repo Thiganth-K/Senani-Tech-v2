@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, Cpu, ShieldCheck, Microscope, LayoutTemplate, PackageOpen } from "lucide-react";
+import { ArrowRight, Check, Cpu, ShieldCheck, Microscope, LayoutTemplate, PackageOpen, Boxes, PackagePlus, Truck, FileText } from "lucide-react";
 
 import ateImg from "@/assets/semiconductor_services/semiconductor_services_ate_services.png";
 import finalBoardImg from "@/assets/semiconductor_services/semiconductor_services_final_board.png";
@@ -13,11 +13,6 @@ import reliabilityImg from "@/assets/semiconductor_services/semiconductor_servic
 import icCharImg from "@/assets/semiconductor_services/semiconductor_services_ic_characterization.png";
 import referenceImg from "@/assets/semiconductor_services/semiconductor_services_reference_design.png";
 import turnkeyImg from "@/assets/semiconductor_services/semiconductor_services_turnkey_build.png";
-import pcbImg from "@/assets/semiconductor_services/semiconductor_services_pcb.png";
-import inventoryImg from "@/assets/semiconductor_services/semiconductor_services_inventory.png";
-import kittingImg from "@/assets/semiconductor_services/semiconductor_services_kitting.png";
-import shipmentImg from "@/assets/semiconductor_services/semiconductor_services_shipment.png";
-import kitDocImg from "@/assets/semiconductor_services/semiconductor_services_kit_documentation.png";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -34,6 +29,7 @@ interface AccordionItem {
   intro: string;
   points: string[];
   image?: string;
+  icon?: React.ElementType;
 }
 
 interface Section {
@@ -146,31 +142,31 @@ const sections: Section[] = [
         title: "PCB Assembly",
         intro: "Precise fabrication and assembly of printed circuit boards according to specified requirements.",
         points: [],
-        image: pcbImg,
+        icon: Cpu,
       },
       {
         title: "Inventory Management",
         intro: "Efficient tracking and management of electronic components, guaranteeing their availability throughout production.",
         points: [],
-        image: inventoryImg,
+        icon: Boxes,
       },
       {
         title: "Kitting",
         intro: "Methodical compilation of all essential components into organized kits, enhancing the efficiency of the assembly process.",
         points: [],
-        image: kittingImg,
+        icon: PackagePlus,
       },
       {
         title: "Shipment",
         intro: "Coordination of logistics to ensure timely delivery of kits to end-users or production facilities, optimizing project timelines.",
         points: [],
-        image: shipmentImg,
+        icon: Truck,
       },
       {
         title: "Kit Documentation",
         intro: "Thorough documentation accompanying each kit, providing comprehensive guidance and reference for assembly and usage.",
         points: [],
-        image: kitDocImg,
+        icon: FileText,
       },
     ],
   },
@@ -244,6 +240,39 @@ function SubServiceCard({ item, index }: { item: AccordionItem; index: number })
           </div>
         )
       )}
+    </motion.div>
+  );
+}
+
+function KeyElementCard({ item, index }: { item: AccordionItem; index: number }) {
+  const IconComponent = item.icon;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+      className="group bg-card/90 backdrop-blur-sm border border-border/70 hover:border-primary/40 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1.5 flex flex-col p-6 sm:p-7 text-center items-center h-full"
+    >
+      {/* Icon SVG Container */}
+      <div className="w-16 h-16 sm:w-20 sm:h-20 mb-5 rounded-2xl bg-gradient-to-br from-primary/15 via-primary/5 to-transparent border border-primary/20 flex items-center justify-center shrink-0 shadow-inner group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-500">
+        {IconComponent ? (
+          <IconComponent className="w-8 h-8 sm:w-10 sm:h-10 text-primary group-hover:text-primary-foreground transition-colors duration-500" strokeWidth={2} />
+        ) : item.image ? (
+          <img src={item.image} alt={item.title} className="w-full h-full object-contain" />
+        ) : null}
+      </div>
+
+      {/* Title */}
+      <h4 className="text-lg sm:text-xl font-display font-bold text-foreground mb-2.5 group-hover:text-primary transition-colors duration-300">
+        {item.title}
+      </h4>
+
+      {/* Intro Description */}
+      <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm opacity-90">
+        {item.intro}
+      </p>
     </motion.div>
   );
 }
@@ -336,7 +365,15 @@ function ContentPanel({ section }: { section: Section }) {
           <h3 className="font-display font-semibold text-foreground text-xl md:text-2xl mb-4">
             {section.id === "turnkey" ? "Key Elements" : "Sub-Services"}
           </h3>
-          {section.accordions.length === 5 ? (
+          {section.id === "turnkey" ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+              {section.accordions.map((acc, i) => (
+                <div key={acc.title} className="h-full">
+                  <KeyElementCard item={acc} index={i} />
+                </div>
+              ))}
+            </div>
+          ) : section.accordions.length === 5 ? (
             <div className="space-y-6">
               {/* First 3 in a row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { WhatsAppBubble } from "./components/WhatsAppBubble";
+import { GlobalInteractiveBackground } from "./components/effects/GlobalInteractiveBackground";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <GlobalInteractiveBackground />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
