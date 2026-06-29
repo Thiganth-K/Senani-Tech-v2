@@ -33,7 +33,7 @@ const footerLinks = {
       },
       { 
         name: "Registered Address", 
-        address: "212-6(3), Thirumalai Nagar,\nNarasothipatty, Alagapuram,\nSalem, Tamil Nadu - 636004" 
+        address: "SENANITECH\n212-6(3), Thirumalai Nagar,\nNarasothipatty, Alagapuram,\nSalem, Tamil Nadu - 636004" 
       },
     ],
   },
@@ -52,9 +52,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Brand Column */}
           <div className="flex flex-col">
-            <Link to="/" className="inline-flex items-center gap-3 no-underline mb-2">
-              <img src={logoShort} alt="SenaniTech Icon" className="w-20 h-20 sm:w-24 sm:h-24 object-contain flex-shrink-0" />
-              <img src={logoLong} alt="SenaniTech" className="h-20 sm:h-24 w-auto max-w-[300px] sm:max-w-[360px] object-contain" />
+            <Link to="/" className="inline-flex items-center gap-0 no-underline mb-2">
+              <img src={logoShort} alt="SenaniTech Icon" className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0" />
+              <img src={logoLong} alt="SenaniTech" className="h-20 md:h-28 w-auto max-w-[360px] object-contain -ml-2 sm:-ml-3 shrink-0" />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6 mt-4">
               Your worldwide partner in semiconductor and electronics engineering excellence.

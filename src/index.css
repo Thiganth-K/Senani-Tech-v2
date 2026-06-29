@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +14,7 @@
 
     /* Text */
     --foreground: 0 0% 0%; /* #000000 */
-    --muted-foreground: 0 0% 33%; /* #555555 */
+    --muted-foreground: 0 0% 0%; /* #000000 (Black) */
 
     /* Primary */
     --primary: 157 100% 43%; /* #00db87 */
@@ -26,7 +26,6 @@
     --highlight: 157 100% 43%; /* #00db87 - same vibrant green as primary */
     --highlight-foreground: 0 0% 0%;
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 60%;
 
     /* Borders & inputs */
     --border: 0 0% 90%; /* #e5e5e5 */
@@ -46,7 +45,7 @@
     --background: 0 0% 100%;
     --section-background: 0 0% 98%;
     --foreground: 0 0% 0%;
-    --muted-foreground: 0 0% 33%;
+    --muted-foreground: 0 0% 0%;
     --primary: 157 100% 43%;
     --primary-foreground: 0 0% 100%;
     --primary-hover: 156 100% 36%;
@@ -63,13 +62,13 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Roboto', system-ui, sans-serif;
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    font-family: 'Roboto', system-ui, sans-serif;
     color: hsl(var(--foreground));
   }
 

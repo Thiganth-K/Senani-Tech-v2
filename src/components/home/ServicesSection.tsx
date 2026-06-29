@@ -3,9 +3,9 @@ import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-import semiconductorImg from "@/assets/ServiceSection/Semiconductor.jpg";
-import technologyImg from "@/assets/ServiceSection/Technology.jpg";
-import systemImg from "@/assets/ServiceSection/System.jpg";
+import semiconductorImg from "@/assets/ServiceSection/ServiceSection_Semiconductor.png";
+import technologyImg from "@/assets/ServiceSection/ServiceSection_Technology.png";
+import systemImg from "@/assets/ServiceSection/ServiceSection_System.png";
 
 const services = [
   {
@@ -76,13 +76,14 @@ export function ServicesSection() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.15 }}
+              className="h-full"
             >
               <ServiceCard service={service} index={index} />
             </motion.div>
@@ -120,14 +121,14 @@ function ServiceCard({ service, index }: { service: typeof services[number]; ind
         />
 
         {/* Image */}
-        <div className="relative w-full h-52 overflow-hidden">
+        <div className="relative w-full h-52 flex items-center justify-center overflow-hidden pt-4 px-4">
           <img
             src={service.image}
             alt={service.title}
-            className={`w-full h-full object-cover transition-transform duration-700 ${isHovered ? "scale-105" : "scale-100"}`}
+            className={`max-h-full w-auto object-contain transition-transform duration-700 ${isHovered ? "scale-105" : "scale-100"}`}
           />
           {/* Gradient overlay at bottom of image */}
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-card to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-card to-transparent pointer-events-none" />
         </div>
 
         {/* Content */}
