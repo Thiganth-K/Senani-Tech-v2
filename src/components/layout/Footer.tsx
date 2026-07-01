@@ -21,6 +21,8 @@ const footerLinks = {
   ],
   quickLinks: [
     { name: "About Us", path: "/about" },
+    { name: "Portfolio", path: "/portfolio" },
+    { name: "Blogs", path: "/blogs" },
     { name: "Contact", path: "/contact" },
   ],
   contact: {
